@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Audiowide&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Audiowide&family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+#panierbutton{  
+    width: Hug (105px)px;
+    height: Fixed (48px)px;
+    top: 31px;
+    left: 1356px;
+    padding: 10px 16px 10px 16px;
+    gap: 8px;
+    border-radius: 6px ;
+    border: 1px ;
+    opacity: 0px;
+    color:white;
+}
+
+#userphoto{
+    width: 44px;
+    height: 44px;
+    border-radius: 46px ;
+    opacity: 0px;
+    background: #EAEDEE;
+}
+
+#nav2{
+    overflow-x: hidden;
+}
+
+@media only screen and (max-width: 1150px) {
+    #nav2{
+        justify-content: left;
+        gap: 1.5rem;
+        overflow-x: scroll;
+    }
+  }
+
+
+#nav2 > div:hover{
+    cursor: pointer;
+}
+
+
+#productimage{
+    background-image: url('./store/product.png');
+    background-size: cover;
+    background-position: center;
+    background-color: transparent ;
+    width: 34.5rem;
+    height: 34.5rem;
+}
