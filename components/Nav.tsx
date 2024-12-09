@@ -1,3 +1,5 @@
+"use client"
+
 import {Logo} from "./store/logo"
 import {Cart} from "./store/logo"
 import {Heart} from "./store/logo"
@@ -7,8 +9,22 @@ import {Dropdown} from "./store/logo"
 import {Menu} from "./store/logo"
 import '@fontsource/poppins';
 import './custom.css'
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+
+gsap.registerPlugin(useGSAP);
 
 export default function Nav() {
+
+    useGSAP(()=>{
+        gsap.from("#nav2 div",{
+            y:100,
+            opacity:0,
+            stagger:0.05,
+            duration:1,
+        })
+    })
+
     return (
         <>
         {/* // Top section of nav bar */}
@@ -66,7 +82,7 @@ export default function Nav() {
 
             {/* // bottom section of nav bar */}
 
-            <div id="nav2" className="flex text-[14px ] justify-between items-center pl-[1.44rem] pr-[1.44rem] font-[{'Inter'}] mt-[2rem] flex-shrink-0 overflow-x-scroll whitespace-nowrap  border-b-[1px] border-b-[#E5E7E0B]">
+            <div id="nav2" className="flex text-[14px ] justify-between items-center pl-[1.44rem] pr-[1.44rem] font-[{'Inter'}] mt-[2rem] flex-shrink-0 overflow-x-scroll whitespace-nowrap overflow-y-hidden  border-b-[1px] border-b-[#E5E7E0B]">
                 <div className="pb-[1.5rem] text-[#0093D0] font-[700] flex-shrink-0 border-b-[2px] border-b-[#0093D0]">Art de la table</div>
                 <div className="pb-[1.5rem] text-gray-500 flex-shrink-0">Mobilier</div>
                 <div className="pb-[1.5rem] text-gray-500 flex-shrink-0">Nappage</div>

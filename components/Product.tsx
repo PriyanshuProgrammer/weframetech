@@ -1,3 +1,4 @@
+"use client"
 import { url } from 'inspector'
 import './custom.css'
 import { Ellipse } from './store/logo'
@@ -5,7 +6,22 @@ import { Scale } from './store/logo'
 import { Cancel } from './store/logo'
 import { Hearbig } from './store/logo'
 
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+
+gsap.registerPlugin(useGSAP);
+
+
 export default function Product(){
+
+    useGSAP(()=>{
+        gsap.from("#tableimagesmall",{
+            x:-100,
+            stagger:0.1,
+            duration:0.5,
+        })
+    })
+
     return (
         <>
             <div className='mt-[1.32rem] mb-[1.32rem] mr-[2.12rem] ml-[2.12rem]'>
